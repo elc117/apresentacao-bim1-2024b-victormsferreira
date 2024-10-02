@@ -28,6 +28,6 @@ Como queremos uma função que receba uma lista e retorne uma outra lista com el
 
 Agora precisamos apenas de uma função lambda que verifique se uma bounding box é válida ou não. Uma bounding box é definida por uma tupla da forma `(xmin, ymin, xmax, ymax)`, portanto essa função lambda deve ser algo da forma `(\(xmin, ymin, xmax, ymax) -> ____)`
 
-Agora que temos uma função lambda que recebe os valores da bounding box, apenas é necessário que ela retorne se ela é válida ou não. Essa condição é de que xmin seja maior que xmax, ou que ymin seja maior que ymax. Portato, a função lambda completa será: `(\(xmin, ymin, xmax, ymax) -> xmin > xmax || ymin > ymax)`
+Agora que temos uma função lambda que recebe os valores da bounding box, apenas é necessário que ela retorne se ela é válida ou não. Essa condição é de que xmin seja maior que xmax, ou que ymin seja maior que ymax. Portanto, a função lambda completa será: `(\(xmin, ymin, xmax, ymax) -> xmin > xmax || ymin > ymax)`
 
 Portanto, a função completa sera `getInvalidBoundingBoxes boxes = filter (\(x1, y1, x2, y2) -> x2 < x1 || y2 < y1) boxes`, e essa função tem o tipo `[(Float, Float, Float, Float)] -> [(Float, Float, Float, Float)]`
